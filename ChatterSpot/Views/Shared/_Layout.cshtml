@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/glypho-free/64/speech-bubble-dots-outline-128.png" />
+    <title>@ViewBag.Title :: ChatterBox</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/fontawesome")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand"><i class="fa fa-comments"></i> ChatterBox</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li><a href="@Url.Action("About", "Home")"><i class="fa fa-info"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/toastr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
